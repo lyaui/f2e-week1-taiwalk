@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { ROUTE } from 'constants/routes.js';
 import Layout from 'components/Layout/Layout.js';
 const Home = lazy(() => import('pages/Home'));
@@ -16,6 +16,7 @@ const App = () => {
           <Route path={ROUTE.EXPLORE} element={<Explore />} />
           <Route path={ROUTE.DETAIL} element={<Details />} />
           <Route path={ROUTE.SEARCH} element={<Search />} />
+          <Route path='/' element={<Navigate replace to={ROUTE.HOME} />} />
         </Routes>
       </Layout>
     </Suspense>

@@ -17,7 +17,8 @@ module.exports = {
           DEFAULT: '#FF725E',
         },
         yellow: {
-          DEFAULT: '#BEA363',
+          DEFAULT: '#E0DA48',
+          dark: '#BEA363',
         },
         gray: {
           100: '#F9F9F9',
@@ -27,6 +28,9 @@ module.exports = {
           800: '#2F2F2F',
           900: '#1E1E1E',
         },
+      },
+      fontFamily: {
+        playfair: ['Playfair Display', 'system-ui'],
       },
     },
   },

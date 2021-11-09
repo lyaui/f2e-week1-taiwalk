@@ -18,7 +18,7 @@ const Navbar = () => {
               className='p-2.5 text-gray-700 font-normal'
               // className={['px-2.5', (navData) => navData.isActive && 'active-class']}
             >
-              {navItem.name}
+              {navItem.label}
             </NavLink>
           ))}
         </div>

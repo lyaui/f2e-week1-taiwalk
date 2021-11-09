@@ -1,7 +1,9 @@
 import SpotIcon from 'assets/icons/spot24_Y.svg';
+import SearchIcon from 'assets/icons/search30.svg';
 import { CATEGORIES } from 'constants/categories.js';
 import Filter from 'components/UI/Filter.js';
 import Input from 'components/UI/Input.js';
+import Button from 'components/UI/Button.js';
 
 const Header = () => {
   return (
@@ -24,6 +26,9 @@ const Header = () => {
       <div className='w-2/5 mt-4'>
         <Filter options={CATEGORIES} />
         <Input placeholder='你想去哪裡？請輸入關鍵字' />
+        <Button>
+          <img src={SearchIcon} className='mr-2' alt='搜尋' />搜 尋
+        </Button>
       </div>
     </header>
   );

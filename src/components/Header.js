@@ -1,9 +1,13 @@
 import SpotIcon from 'assets/icons/spot24_Y.svg';
+import { CATEGORIES } from 'constants/categories.js';
+import Filter from 'components/UI/Filter.js';
+
 const Header = () => {
   return (
-    <header class='flex justify-center'>
-      <div className=''>
-        <h1 className='text-5xl tracking-wide leading-relaxed font-light'>
+    <header class='px-24 flex justify-between items-center'>
+      {/* heading */}
+      <div className='mr-22 w-3/5'>
+        <h1 className='text-gray-900 text-5xl tracking-wide leading-relaxed font-light'>
           探索<span className='border-b-2 border-yellow'>台灣之美</span>
           <br />
           讓我們更親近這片土地
@@ -14,6 +18,10 @@ const Header = () => {
             台灣旅遊景點導覽<span className='ml-2 font-playfair'>Taiwan Travel Guide</span>
           </p>
         </div>
+      </div>
+      {/* search */}
+      <div className='w-2/5 mt-4'>
+        <Filter options={CATEGORIES} />
       </div>
     </header>
   );

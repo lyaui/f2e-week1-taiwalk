@@ -1,14 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { lazy, Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { ROUTE } from 'constants/routes.js';
+import Layout from 'components/Layout/Layout.js';
+const Home = lazy(() => import('pages/Home'));
+const Details = lazy(() => import('pages/Details'));
+const Explore = lazy(() => import('pages/Explore'));
+const Search = lazy(() => import('pages/Search'));
 
-function App() {
+const App = () => {
   return (
-    <div className='App'>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, beatae doloribus numquam
-      velit maxime, culpa commodi quod deserunt sit dolorem eligendi, porro delectus pariatur eaque
-      veritatis tempora! Quis, iure velit!
-    </div>
+    <Suspense fallback={<div></div>}>
+      <Layout>
+        <Routes>
+          <Route path={ROUTE.HOME} element={<Home />} />
+          <Route path={ROUTE.EXPLORE} element={<Explore />} />
+          <Route path={ROUTE.DETAIL} element={<Details />} />
+          <Route path={ROUTE.SEARCH} element={<Search />} />
+        </Routes>
+      </Layout>
+    </Suspense>
   );
-}
+};
 
 export default App;

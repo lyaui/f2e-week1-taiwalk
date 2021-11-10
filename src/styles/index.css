@@ -20,4 +20,7 @@ body {
   .heading-card {
     @apply inline-block font-bold text-gray-800 text-xl leading-7;
   }
+  .heading-content {
+    @apply inline-block font-bold text-gray-800 text-lg leading-7;
+  }
 }

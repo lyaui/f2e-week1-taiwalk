@@ -17,4 +17,7 @@ body {
   .heading-readmore {
     @apply inline-block font-medium text-orange text-base;
   }
+  .heading-card {
+    @apply inline-block font-bold text-gray-800 text-xl leading-7;
+  }
 }

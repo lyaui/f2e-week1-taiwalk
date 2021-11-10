@@ -9,3 +9,12 @@ body {
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: 300;
 }
+
+@layer components {
+  .heading-section {
+    @apply font-light text-gray-900 text-4xl;
+  }
+  .heading-readmore {
+    @apply inline-block font-medium text-orange text-base;
+  }
+}

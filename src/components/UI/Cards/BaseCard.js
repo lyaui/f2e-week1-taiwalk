@@ -6,7 +6,7 @@ const BaseCard = ({ item }) => {
     <div className='flex flex-col'>
       <Link to='/' className='mb-3'>
         <img
-          className='h-48 rounded-xl bg-primary-light '
+          className='h-48 rounded-xl bg-primary-light object-cover'
           src={item.Picture.PictureUrl1}
           alt={item.Picture.PictureDescription1}
         />
@@ -16,7 +16,7 @@ const BaseCard = ({ item }) => {
           <h3 className='heading-card truncate w-full'>{item.Name}...</h3>
         </Link>
         <div className='flex'>
-          <img src={SpotIcon} alt={Location} />
+          <img src={SpotIcon} alt={Location} className='' />
           <span className='ml-1 font-normal text-gray-700'>{item.Location}</span>
         </div>
       </div>

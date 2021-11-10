@@ -14,6 +14,7 @@ const Navbar = () => {
         <div>
           {CATEGORIES.map((navItem) => (
             <NavLink
+              key={navItem.value}
               to={ROUTE.BUILD_EXPLORE_PATH({ type: navItem.value })}
               className='p-2.5 text-gray-700 font-normal'
               // className={['px-2.5', (navData) => navData.isActive && 'active-class']}

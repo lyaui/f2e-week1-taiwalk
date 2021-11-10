@@ -11,8 +11,8 @@ const Footer = () => {
     <footer className='h-14 bg-primary flex items-center justify-center'>
       <div className='text-center text-white'>
         #The F2E 3rd Week01
-        {infos.map((person) => (
-          <a className='px-2 underline' href={person.link}>
+        {infos.map((person, index) => (
+          <a key={index} className='px-2 underline' href={person.link}>
             #{person.work}-{person.name}
           </a>
         ))}

@@ -87,15 +87,15 @@ const Home = () => {
 
   useEffect(() => {
     (async () => {
-      // const res = await apiGetAllSpots();
-      // console.log(res.data);
+      const res = await apiGetAllSpots();
+      console.log(res.data);
     })();
   }, []);
 
   return (
     <div>
       <Header />
-      <Carousel styles='mt-14 mb-4' />
+      <Carousel className='mt-14 mb-4' />
       <Section title='近期活動' readmore='查看更多活動' column={2}>
         {currentActivities.slice(0, 4).map((activity) => (
           <InfoCard key={activity.ID} activity={activity} />

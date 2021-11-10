@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { apiGetAllActivities } from 'apis';
 import Header from 'components/Header';
+import Carousel from 'components/Carousel.js';
 import Section from 'components/Section.js';
 import InfoCard from 'components/UI/Cards/InfoCard.js';
 import BaseCard from 'components/UI/Cards/BaseCard.js';
@@ -94,6 +95,7 @@ const Home = () => {
   return (
     <div>
       <Header />
+      <Carousel styles='mt-14 mb-4' />
       <Section title='近期活動' readmore='查看更多活動' column={2}>
         {currentActivities.slice(0, 4).map((activity) => (
           <InfoCard key={activity.ID} activity={activity} />

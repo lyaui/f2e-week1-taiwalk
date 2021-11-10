@@ -20,8 +20,8 @@ const InfoCard = ({ activity }) => {
             <time datetime={activity.StartTime}>{timeFormatter(activity.EndTime)}</time>
           </div>
           {/* name */}
-          <Link to='/'>
-            <h3 className='heading-card'>{activity.Name}</h3>
+          <Link to='/' className='heading-card'>
+            <h3>{activity.Name}</h3>
           </Link>
         </div>
 

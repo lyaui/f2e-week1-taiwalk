@@ -4,7 +4,7 @@ import ArrowRight from 'assets/icons/arrow-right16_R.svg';
 const Section = ({ children, title, readmore, column = 2 }) => {
   return (
     <section className='py-5 w-full'>
-      <div className='flex justify-between items-center px-4 pb-3'>
+      <div className='flex justify-between items-center px-4 pb-4'>
         <h2 className='heading-section'>{title}</h2>
         {readmore && (
           <Link to='/' className='heading-readmore'>

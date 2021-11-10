@@ -3,6 +3,7 @@ import { apiGetAllActivities } from 'apis';
 import Header from 'components/Header';
 import Section from 'components/Section.js';
 import InfoCard from 'components/UI/Cards/InfoCard.js';
+import BaseCard from 'components/UI/Cards/BaseCard.js';
 
 const Home = () => {
   const currentActivities = [
@@ -98,15 +99,15 @@ const Home = () => {
           <InfoCard key={activity.ID} activity={activity} />
         ))}
       </Section>
-      <Section title='熱門打卡景點' readmore='查看更多景點'>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti impedit architecto at
-        excepturi unde repellendus, voluptates, corporis, asperiores facere praesentium
-        perspiciatis? Perferendis similique quod enim. Laboriosam saepe atque minus molestiae.
+      <Section title='熱門打卡景點' readmore='查看更多景點' column={4}>
+        {currentActivities.slice(0, 4).map((activity) => (
+          <BaseCard key={activity.ID} item={activity} />
+        ))}
       </Section>
-      <Section title='一再回訪美食' readmore='查看更多美食'>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur velit corporis, ex
-        debitis suscipit eaque voluptate? Minima placeat vitae voluptas atque beatae eos aliquid non
-        officiis, illum, dolore corrupti. Aspernatur.
+      <Section title='一再回訪美食' readmore='查看更多美食' column={4}>
+        {currentActivities.slice(0, 4).map((activity) => (
+          <BaseCard key={activity.ID} item={activity} />
+        ))}
       </Section>
     </div>
   );

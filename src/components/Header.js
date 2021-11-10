@@ -7,7 +7,7 @@ import Button from 'components/UI/Button.js';
 
 const Header = () => {
   return (
-    <header class='px-24 flex justify-between items-center'>
+    <header className='px-24 flex justify-between items-center'>
       {/* heading */}
       <div className='mr-22 w-3/5'>
         <h1 className='text-gray-900 text-5xl tracking-wide leading-relaxed font-light'>

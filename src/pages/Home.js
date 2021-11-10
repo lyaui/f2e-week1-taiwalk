@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { apiGetAllActivities } from 'apis';
+import { apiGetAllSpots } from 'apis';
 import Header from 'components/Header';
 import Carousel from 'components/Carousel.js';
 import Section from 'components/Section.js';
@@ -85,12 +85,12 @@ const Home = () => {
     },
   ];
 
-  // useEffect(() => {
-  //   (async () => {
-  //     const res = await apiGetAllActivities();
-  //     console.log(res.data);
-  //   })();
-  // }, []);
+  useEffect(() => {
+    (async () => {
+      // const res = await apiGetAllSpots();
+      // console.log(res.data);
+    })();
+  }, []);
 
   return (
     <div>
